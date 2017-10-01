@@ -1,0 +1,22 @@
+oauth2-data-db:
+  url: jdbc:postgresql://${local-dev-env.db-host}:${local-dev-env.db-port}/oauth2db
+  username: admin
+  password: password
+  driver-class-name: org.postgresql.Driver
+  testOnBorrow: true
+  validationQuery: SELECT 1
+  tomcat:
+    max-wait: 5000
+    max-active: 5
+    max-idle: 3
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n'
+  level:
+    root: debug
+    org.springframework: info
+    org.hibernate: info
+    org.apache: info
+#    org.hibernate.SQL: DEBUG
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
