@@ -11,8 +11,8 @@ import javax.sql.DataSource;
 
 @SpringBootConfiguration
 @Import({
-        AuthServerOAuth2Config.class,
         ServerSecurityConfig.class,
+        AuthServerOAuth2Config.class,
         OAuth2ResourceServerConfig.class
 })
 public class ServiceDefaultApplicationContext {
